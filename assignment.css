@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito&family=Roboto:wght@100;300;400;500;700&display=swap');
-@import url('components\\card\\card.css') ;
+@import url('components\\card\\card.css');
 :root{
     --black:rgb(20 20 20);
     --red:#e50914;
@@ -15,12 +15,10 @@
 .shadow{
     box-shadow: 5px 5px 8px 0 grey;
 }
-h1{
+h1,h2,h3,h4,h5,h6{
     color: var(--white);
 }
-h3{
-    color: var(--white);
-}
+
 .small-square-size{
         width: 2.5rem;
         height: 2.5rem;
@@ -163,4 +161,116 @@ a:visited{
 .preview-and-code{
     display: flex;
     justify-content: space-between;
+}
+
+/* basic cards */
+.basic-card{
+    width: 20rem;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.card-image{
+    width: 20rem;
+    border-radius: 5px 5px 0px 0px;
+}
+.card-title{
+    background-color: var(--white);
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-bottom: 0rem;
+}
+.card-subTitle{
+    background-color: var(--white);
+    font-weight: 400;
+    margin-left: 1rem;
+    margin-top: 0rem;
+}
+
+.card-text{
+    background-color: var(--white);
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.card-btn{
+    background-color: transparent;
+    color: var(--red);
+    border: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+
+.fa-heart{
+    background-color: transparent;
+    color: #666666;
+    font-size: 1.2rem;
+}
+.fa-share-alt{
+    background-color: transparent;
+    color: #666666;
+    font-size: 1.2rem;
+}
+
+.fa-ellipsis-v{
+    background-color: transparent;
+    color: #666666;
+    font-size: 1.2rem;
+}
+/* basic card ends */
+
+/* Basic with Text over Media */
+.position-relative-card{
+    position: relative;
+}
+.absolute-card-title{
+    position: absolute;
+    top: 9rem;
+    background-color: transparent;
+    color: var(--white);
+}
+
+.absolute-card-subtitle{
+    position: absolute;
+    top: 11rem;
+    background-color: transparent;
+    color: var(--white);
+}
+
+/* Basic with Text over Media ends */
+
+/* Basic with header starts */
+.position-relative-imagecard{
+    position: relative;
+    bottom: 0rem;
+    
+}
+.absolute-headercard-title{
+    position: absolute;
+    top: 0rem;
+    background-color: transparent;
+    color: var(--black);
+}
+
+.absolute-headercard-subtitle{
+    position: absolute;
+    top: 2rem;
+    background-color: transparent;
+    color: var(--black);
+}
+
+.headercard-image{
+    margin-top: 4rem;
+    background-color: transparent;
+    color: var(--black);
+    border-radius: 0;
+}
+/* Basic with header ends */
+
+.display-zero{
+    display: none !important;
 }
