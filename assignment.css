@@ -5,6 +5,7 @@
     --red:#e50914;
     --white:#fff;
     --font:'Roboto', sans-serif;
+    --chipcolor:grey;
 }
 
 *{
@@ -18,6 +19,7 @@
 h1,h2,h3,h4,h5,h6{
     color: var(--white);
 }
+
 
 .small-square-size{
         width: 2.5rem;
@@ -201,10 +203,22 @@ a:visited{
     margin-bottom: 1rem;
     font-weight: 600;
     font-size: 1rem;
+    cursor: pointer;
 }
 
+.icon-btn{
+    background-color: transparent;
+    color: var(--red);
+    border: none;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
 
-
+.visibility-hidden{
+    visibility: hidden;
+}
 .fa-heart{
     background-color: transparent;
     color: #666666;
@@ -273,4 +287,283 @@ a:visited{
 
 .display-zero{
     display: none !important;
+}
+
+/* chips starts */
+
+.chip-container{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 18rem;
+    background-color: var(--white);
+    padding: 3rem 0rem 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.chip-stacked-container{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    background-color: var(--white);
+    padding: 3rem 1rem 0.5rem 1rem;
+    border-radius: 5px;
+}
+.chip{
+    border-radius: 1rem;
+    background-color: var(--chipcolor);
+    text-align: center;
+    padding: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    color: white;
+    position: relative;
+}
+
+.chip-primary{
+    background-color: var(--red);
+}
+
+.chip-icon-primary{
+    background-color: transparent;
+    float: right;
+    padding: 2px;
+}
+.chip-secondary{
+    background-color: transparent;
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+.chip-icon-secondary{
+    background-color: transparent;
+    color: var(--red);
+    float: right;
+    padding: 2px;
+}
+/* chip ends */
+
+/* drawer starts */
+.drawer{
+    display: grid;
+    grid-template-areas: 'd n'
+                         'd t';
+    height: 15rem;
+    background-color: var(--white);
+}
+.drawer-nav{
+    grid-area: n;
+    color: var(--white);
+    /* margin-left: 1rem; */
+    background-color: var(--red);
+    padding: 6px;
+    
+}
+
+.drawer-text{
+    grid-area: t;
+    color: var(--black);
+    padding: 6px;
+    /* margin-left: 1rem; */
+    overflow: auto;
+    height: 9rem;
+    background-color: var(--white);
+}
+.drawer-list{
+    grid-area: d;
+    color: var(--black);
+    background-color: var(--white);
+    overflow: auto;
+}
+.drawer-unordered-list{
+    list-style: none;
+    padding: 8px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.drawer-list-item{
+    background-color: var(--white);
+}
+
+.list-icon{
+    background-color: var(--white);
+}
+/* drawer ends */
+
+/* header starts  */
+.navbar-component{
+    display: flex;
+    background-color: var(--black);
+    height: 5rem;
+    align-items: center;
+}
+
+.hamburger-lines{
+    width: 1.2rem;
+    height: 4px;
+    color: var(--white);
+    background-color: red;
+    margin-bottom: 3px;
+}
+.navbar-title{
+    margin-right: auto;   
+    color: var(--red);
+    font-size: 32px;
+    font-weight: 600;
+    /* margin-top: 0rem;
+    padding: 0rem; */
+    margin-left: 1rem;
+}
+
+.searchbar{
+    background-color: var(--white);
+    border: none;
+    border-radius: 5px;
+    height: 1.5rem;
+    padding: 6px;
+}
+.navbar-icons{
+    margin-left: 1rem;
+    color: var(--white);
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
+}
+/* header ends  */
+
+/* badges starts */
+
+.badges{
+    display: inline-block;
+    position: relative;
+}
+.wishlist-badge{
+    position: absolute;
+    
+    bottom: 0.9rem;
+    left: 1.7rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 1.2rem; 
+    height: 1.2rem; 
+    text-align: center;
+    line-height: 1.2rem;
+    
+    margin: auto;
+    border-radius: 2rem;
+    color: var(--white);
+    background-color: var(--red);
+    font-size: 11px;
+}
+
+.profile-image{
+    border-radius: 50%;
+}
+.profile-badge{
+    position: absolute;
+    display: inline-block;
+    bottom: 6px;
+    right:8px;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.online-badge{
+    background-color: limegreen;
+}
+
+.busy-badge{
+    background-color: rgb(196, 1, 1);
+}
+
+.offline-badge{
+    background-color: grey;
+}
+
+.snackbar{
+    display: inline-block;
+    background-color: var(--white);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.snackbar-text{
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.liveDemo-btn{
+    display: block;
+    background-color: var(--red);
+    border: none;
+    margin-top: 1rem;
+    color: var(--white);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#snackbar-working{
+    display: none;
+    position: fixed;
+    bottom: 0rem;
+    left: 45rem;
+    
+}
+
+.dialog{
+    display: inline-block;
+    background-color: var(--white);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.dialog-title{
+    font-weight: 600;
+}
+
+.dialog-text{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.dialog-btn{
+    background-color: transparent;
+    color: var(--red);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* tabs */
+.tabs{
+    display: inline-block;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 9px;
+}
+
+.tab-btn{
+    background-color: transparent;
+    color: var(--red);
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+
+.tabs-text{
+    background-color: var(--white);
+    
+}
+
+#second-para{
+    display: none;
 }
