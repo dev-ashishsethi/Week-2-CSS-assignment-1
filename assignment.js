@@ -24,7 +24,7 @@ const tab1= ()=>{
         tab1_btn.style.borderBottom='1px solid #e50914';
         tab2_btn.style.borderBottom='none';
     }
-    
+    tab1();
 
 tab1_btn.addEventListener('click', tab1);
 
